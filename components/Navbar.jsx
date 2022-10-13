@@ -34,9 +34,6 @@ const Navbar = () => {
   const numberOfCartItems = useSelector((state) => state.cart.totalItems);
   const cartQuantity =
     cartItems?.length && cartItems?.map((item) => item.quantity);
-  // const numberOfCartItems =
-  //     ? cartQuantity.reduce((total, num) => (total += num))
-  //     : 0;
   if (cartQuantity.length > 0) {
     const total = cartQuantity.reduce((total, num) => (total += num));
     dispatch(totalItems(total));
@@ -72,7 +69,7 @@ const Navbar = () => {
           />
           <Link href="/">
             <Typography
-              variant="h6"
+              variant="h5"
               noWrap
               sx={{
                 mr: 2,
