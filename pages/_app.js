@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@mui/material/styles";
+import Box from "@mui/material/Box";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import store from "../redux/store";
@@ -11,15 +12,15 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <Provider store={store}>
         <Navbar />
-        <div
-          style={{
+        <Box
+          sx={{
             position: "relative",
-            top: "70px",
+            top: { xs: "57px", sm: "65px", md: "69px" },
             marginBottom: "200px",
           }}
         >
           <Component {...pageProps} />
-        </div>
+        </Box>
         <Footer />
       </Provider>
     </ThemeProvider>
