@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "book": "country flowers in watercolour",
+    "author":"Ann Blockley",
+    "category": "art",
+    "image": "/images/art/countryFlowers.jpeg",
+    "price": 36.49
+  },
+  {
+    "id": 2,
+    "book": "Realistic Drawing Secrets",
+    "author":"Carrie Stuart Parks & Rick Parks",
+    "category": "art",
+    "image": "/images/art/drawingSecrets.jpeg",
+    "price": 21.99
+  },
+  {
+    "id": 3,
+    "book": "Beginner's guide to community-based arts",
+    "author":"Keith Knight",
+    "category": "art",
+    "image": "/images/art/communityBased.jpeg",
+    "price": 49.99
+  },
+  {
+    "id": 4,
+    "book": "When you reach me",
+    "author":"Rebecca Stead",
+    "category": "children",
+    "image": "/images/children/whenYouReachMe.jpeg",
+    "price": 5.09
+  },
+  {
+    "id": 5,
+    "book": "Refugee Boy",
+    "author":"Benjamin Zephaniah",
+    "category": "children",
+    "image": "/images/children/refugee.jpeg",
+    "price": 17.49
+  },
+  {
+    "id": 6,
+    "book": "El Deafo",
+    "author":"Cece Bell",
+    "category": "children",
+    "image": "/images/children/elDeafo.jpeg",
+    "price": 29.35
+  },
+  {
+    "id": 7,
+    "book": "Cat's cafe",
+    "author":"Matt Tarpley",
+    "category": "children",
+    "image": "/images/children/catsCafe.jpeg",
+    "price": 18.99
+  },
+  {
+    "id": 8,
+    "book": "one cup at a time",
+    "author":"Matt Tarpley",
+    "category": "children",
+    "image": "/images/children/oneCup.jpeg",
+    "price": 29.99
+  },
+  {
+    "id": 9,
+    "book": "The midnight children",
+    "author":"Dan Gemeinhart",
+    "category": "children",
+    "image": "/images/children/theMidnight.jpeg",
+    "price": 69.99
+  },
+  {
+    "id": 10,
+    "book": "how baking works",
+    "author":"Paula Figoni",
+    "category": "food",
+    "image": "/images/food/baking.jpeg",
+    "price": 30.99
+  },
+  {
+    "id": 11,
+    "book": "The scandi sense diet children",
+    "author":"Suzi Wengel",
+    "category": "food",
+    "image": "/images/food/scandi.jpeg",
+    "price": 50.99
+  },
+  {
+    "id": 12,
+    "book": "vietnamese food any day",
+    "author":"Andrea Nguyen",
+    "category": "food",
+    "image": "/images/food/vietnam.jpeg",
+    "price": 30.99
+  },
+  {
+    "id": 13,
+    "book": "moon cakes and milk bread",
+    "author":"Kristina Cho",
+    "category": "food",
+    "image": "/images/food/moon.jpeg",
+    "price": 50.99
+  }
+]
