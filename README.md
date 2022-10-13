@@ -1,6 +1,6 @@
 # Online Book Store
 
-This is a responsive Online Book store with Next.js and Redux Toolkit
+This is a responsive online book store with Next.js and Redux Toolkit
 
 ## Table of contents
 
