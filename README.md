@@ -8,6 +8,7 @@ This is a responsive online book store with Next.js and Redux Toolkit
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
+- [Links](#links)
 - [Author](#author)
 
 ## Overview
@@ -23,7 +24,7 @@ This is a responsive online book store with Next.js and Redux Toolkit
 #### Shopping Cart
 ![Shopping Cart](./public/screenShot/cart.png)
 
-### Links
+## Links
 
 - Live Site URL: [Live URL]()
 
