@@ -14,8 +14,13 @@ This is a responsive online book store with Next.js and Redux Toolkit
 
 ### Screenshot
 
+#### Home Page
 ![Home Page](./public/screenShot/home.png)
+
+#### All Books
 ![All Books](./public/screenShot/all.png)
+
+#### Shopping Cart
 ![Shopping Cart](./public/screenShot/cart.png)
 
 ### Links
