@@ -1,13 +1,15 @@
 import Box from "@mui/material/Box";
 import PageHeader from "../components/PageHeader";
 import CustomizedTables from "../components/CustomizedTables";
-import { Divider } from "@mui/material";
+import { styles } from ".";
 const CartPage = () => {
   return (
-    <Box>
+    <main style={{ ...styles.mainWrapper }}>
       <PageHeader title="Shopping Cart" />
-      <CustomizedTables />
-    </Box>
+      <main style={{ width: "100%", maxWidth: "1566px" }}>
+        <CustomizedTables />
+      </main>
+    </main>
   );
 };
 export default CartPage;

@@ -2,25 +2,19 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useRouter } from "next/router";
 import BookCard from "../../components/BookCard";
-import { getBooksByCategory } from "../api/books/[category]";
+import { getBooksByCategory } from "../api/category/[category]";
 import { theme } from "../../styles/theme";
 import PageHeader from "../../components/PageHeader";
-
+import BookWrapper from "../../components/BookWrapper";
+import { styles } from "..";
 const CategoryPage = ({ books }) => {
   const router = useRouter();
   return (
-    <Box>
-      <PageHeader title={` Results for ${router.query.category}`} />
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 4,
-          marginBottom: "100px",
-          justifyContent: "flex-start",
-          padding: "0 24px",
-        }}
-      >
+    <main style={{ ...styles.mainWrapper }}>
+      <PageHeader
+        title={` Results for ${router.query.category.split("-").join(" ")}`}
+      />
+      <BookWrapper>
         {books.length ? (
           books.map((book) => <BookCard key={book.id} book={book} />)
         ) : (
@@ -31,8 +25,8 @@ const CategoryPage = ({ books }) => {
             There is no book in this category
           </Typography>
         )}
-      </Box>
-    </Box>
+      </BookWrapper>
+    </main>
   );
 };
 
