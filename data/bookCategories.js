@@ -8,7 +8,7 @@ export const categories = [
   { image: "/images/pets/cover.jpeg", name: "Pets", id: "4" },
   {
     image: "/images/food/cover.jpeg",
-    name: "Food And Drinks",
+    name: "Food",
     id: "3",
   },
 ];
