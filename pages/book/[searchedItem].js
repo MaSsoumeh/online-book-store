@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import BookCard from "../../components/BookCard";
+import BookCard from "../../components/BookCard.tsx";
 import BookWrapper from "../../components/BookWrapper";
 import PageHeader from "../../components/PageHeader";
 import { getSearchedItems } from "../api/books/[searchedItem]";

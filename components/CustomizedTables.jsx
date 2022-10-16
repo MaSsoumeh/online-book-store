@@ -23,7 +23,7 @@ import {
   incrementCart,
   removeFromCart,
   totalCost,
-} from "../redux/cart.slice";
+} from "../redux/cart.slice.ts";
 import { theme } from "../styles/theme";
 import NumberInput from "./NumberInput";
 

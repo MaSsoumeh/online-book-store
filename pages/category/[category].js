@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useRouter } from "next/router";
-import BookCard from "../../components/BookCard";
+import BookCard from "../../components/BookCard.tsx";
 import { getBooksByCategory } from "../api/category/[category]";
 import { theme } from "../../styles/theme";
 import PageHeader from "../../components/PageHeader";

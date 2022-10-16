@@ -16,7 +16,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Link from "next/link";
 import { Badge, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { totalItems } from "../redux/cart.slice";
+import { totalItems } from "../redux/cart.slice.ts";
 
 const pages = [
   { title: "Home", link: "/" },

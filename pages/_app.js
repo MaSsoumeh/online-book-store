@@ -2,7 +2,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import store from "../redux/store";
+import store from "../redux/store.ts";
 import "../styles/globals.css";
 import { theme } from "../styles/theme";
 import { Provider } from "react-redux";
