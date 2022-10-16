@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Card from "@mui/material/Card";
 import { theme } from "../styles/theme";
-import { Box } from "@mui/material";
 import { useState } from "react";
 
 const CategoryCard = ({ image, name }) => {

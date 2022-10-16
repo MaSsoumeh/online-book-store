@@ -6,6 +6,7 @@ const PageHeader = ({ title }) => {
     <p
       style={{
         textAlign: "center",
+        width: "100%",
         background: theme.palette.secondary.main,
         marginBottom: 36,
         color: theme.palette.primary.dark,

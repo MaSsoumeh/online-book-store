@@ -191,6 +191,7 @@ export default function CustomizedTables() {
             display: "flex",
             justifyContent: "flex-start",
             gap: "10%",
+            minWidth: "540px",
           }}
         >
           <div>
