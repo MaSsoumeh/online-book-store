@@ -1,9 +1,23 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from '@reduxjs/toolkit'
+import type { RootState } from "./store";
+
+interface Item {
+  id:number;
+  quantity:number
+}
+interface CartState {
+  items: Array<Item>;
+  max: number
+}
+
+const initialState: CartState= { items: [], max: 20 }
+
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { items: [], max: 20 },
+  initialState,
   reducers: {
-    incrementCart: (state, action) => {
+    incrementCart: (state, action: PayloadAction<Item>) => {
       const searchedIndex = state.items?.findIndex(
         (item) => item.id === action.payload.id
       );
@@ -13,9 +27,9 @@ const cartSlice = createSlice({
         state["items"].push({ ...action.payload, quantity: 1 });
       }
     },
-    addQuantityToCart: (state, action) => {
+    addQuantityToCart: (state, action: PayloadAction<Item>) => {
       const item = state.items.find((item) => item.id === action.payload.id);
-      if (item.quantity === 0) {
+      if (item?.quantity === 0) {
         const index = state.items.findIndex(
           (item) => item.id === action.payload.id
         );
@@ -27,21 +41,24 @@ const cartSlice = createSlice({
         state.items.push({ ...action.payload });
       }
     },
-    decrementCart: (state, action) => {
+    decrementCart: (state, action: PayloadAction<Item>) => {
       const item = state.items.find((item) => item.id === action.payload.id);
-      if (item.quantity === 1) {
-        const index = state.items.findIndex(
-          (item) => item.id === action.payload.id
-        );
-        state.items.splice(index, 1);
-      } else {
-        item.quantity--;
+      if(item)
+      { 
+        if (item?.quantity === 1) {
+          const index = state.items.findIndex(
+            (item) => item.id === action.payload.id
+          );
+          state.items.splice(index, 1);
+        } else {
+          item.quantity--;
+        }
       }
     },
-    removeFromCart: (state, action) => {
+    removeFromCart: (state, action: PayloadAction<Item>) => {
       state.items = state.items.filter((item) => item.id !== action.payload.id);
     },
-    totalItems: (state, action) => {
+    totalItems: (state, action:PayloadAction<number>) => {
       state["totalItems"] = action.payload;
     },
     totalCost: (state, action) => {

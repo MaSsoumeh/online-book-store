@@ -8,16 +8,15 @@ import { theme } from "../styles/theme";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { Tooltip } from "@mui/material";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
 import { incrementCart } from "../redux/cart.slice";
+import { useAppDispatch, useAppSelector } from "../customHooks/hooks";
 
 export default function BookCard({ book }) {
   const { image, book: name, author, category, price, id } = book;
-  console.log(book, "book");
   const route = useRouter();
-  const dispatch = useDispatch();
-  const maxQuantity = useSelector((state) => state.cart.max);
-  const orderedBooks = useSelector((state) => state.cart.items);
+  const dispatch = useAppDispatch();
+  const maxQuantity = useAppSelector((state) => state.cart.max);
+  const orderedBooks = useAppSelector((state) => state.cart.items);
   function addItemToCart() {
     if (!orderedBooks.length) {
       dispatch(incrementCart(book));
@@ -77,7 +76,6 @@ export default function BookCard({ book }) {
 }
 const styles = {
   card: {
-    maxWidth: 345,
     minWidth: 200,
     minHeight: 350,
     maxWidth: 200,
