@@ -120,7 +120,10 @@ const Navbar = () => {
                   <Link href={page.link}>
                     <Typography
                       textAlign="center"
-                      sx={{ color: theme.palette.primary.main }}
+                      sx={{
+                        color: theme.palette.primary.main,
+                        "&:hover": { color: theme.palette.secondary.main },
+                      }}
                     >
                       {page.title}
                     </Typography>
@@ -165,6 +168,7 @@ const Navbar = () => {
                     my: 2,
                     color: theme.palette.primary.light,
                     display: "block",
+                    "&:hover": { color: theme.palette.secondary.main },
                   }}
                 >
                   {page.title}
