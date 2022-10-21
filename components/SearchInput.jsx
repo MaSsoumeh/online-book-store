@@ -32,7 +32,7 @@ export default function SearchInput({ dedicatedStyle, placeholder }) {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <Link href={`/book/${value.split(" ").join("-").toLowerCase()}`}>
+      <Link href={`/book/${value?.split(" ").join("-").toLowerCase()}`}>
         <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
           <SearchIcon />
         </IconButton>

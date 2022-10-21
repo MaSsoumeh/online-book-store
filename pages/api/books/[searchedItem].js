@@ -5,10 +5,10 @@ export function getSearchedItems(searchedItem) {
     (item) =>
       item.book
         .toLowerCase()
-        .includes(searchedItem.split("-").join(" ").toLowerCase()) ||
+        .includes(searchedItem?.split("-").join(" ").toLowerCase()) ||
       item.author
         .toLowerCase()
-        .includes(searchedItem.split("-").join(" ").toLowerCase())
+        .includes(searchedItem?.split("-").join(" ").toLowerCase())
   );
 }
 // export default function reqHandler(req, res) {
