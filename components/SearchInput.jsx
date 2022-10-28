@@ -13,7 +13,9 @@ export default function SearchInput({ dedicatedStyle, placeholder }) {
   function handleSubmit(e) {
     e.preventDefault();
   }
-
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
   return (
     <Paper
       component="form"
@@ -33,7 +35,7 @@ export default function SearchInput({ dedicatedStyle, placeholder }) {
         placeholder={placeholder}
         inputProps={{ "aria-label": { placeholder } }}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={handleChange}
       />
       <Link href={`/book/${value?.split(" ").join("-").toLowerCase()}`}>
         <Button

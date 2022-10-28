@@ -1,15 +1,17 @@
 import data from "./data.json";
 
 export function getSearchedItems(searchedItem) {
-  return data.filter(
-    (item) =>
-      item.book
-        .toLowerCase()
-        .includes(searchedItem?.split("-").join(" ").toLowerCase()) ||
-      item.author
-        .toLowerCase()
-        .includes(searchedItem?.split("-").join(" ").toLowerCase())
-  );
+  return searchedItem
+    ? data.filter(
+        (item) =>
+          item.book
+            .toLowerCase()
+            .includes(searchedItem?.split("-").join(" ").toLowerCase()) ||
+          item.author
+            .toLowerCase()
+            .includes(searchedItem?.split("-").join(" ").toLowerCase())
+      )
+    : data;
 }
 // export default function reqHandler(req, res) {
 //   if (req.method !== "GET") {

@@ -4,18 +4,25 @@ import PageHeader from "../../components/PageHeader";
 import { getSearchedItems } from "../api/books/[searchedItem]";
 import { styles } from "..";
 import { theme } from "../../styles/theme";
+import BookCard from "../../components/BookCard";
 
 const Book = ({ books }) => {
   return (
     <main style={{ ...styles.mainWrapper }}>
       <PageHeader title="Searched Books" />
       <BookWrapper>
-        <Typography
-          color={theme.palette.primary.main}
-          sx={{ width: "100%", textAlign: "center" }}
-        >
-          There is no result
-        </Typography>
+        {books.length ? (
+          books.map((book) => {
+            return <BookCard key={book.id} book={book} />;
+          })
+        ) : (
+          <Typography
+            color={theme.palette.primary.main}
+            sx={{ width: "100%", textAlign: "center" }}
+          >
+            There is no result
+          </Typography>
+        )}
       </BookWrapper>
     </main>
   );
