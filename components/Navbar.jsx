@@ -17,6 +17,8 @@ import Link from "next/link";
 import { Badge, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { totalItems } from "../redux/cart.slice.ts";
+import SearchInput from "./SearchInput";
+import { useRouter } from "next/router";
 
 const pages = [
   { title: "Home", link: "/" },
@@ -26,6 +28,7 @@ const pages = [
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
+  const route = useRouter();
   const theme = useTheme();
   const dispatch = useDispatch();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -121,7 +124,10 @@ const Navbar = () => {
                     <Typography
                       textAlign="center"
                       sx={{
-                        color: theme.palette.primary.main,
+                        color:
+                          route.pathname !== page.link
+                            ? theme.palette.primary.main
+                            : theme.palette.secondary.main,
                         "&:hover": { color: theme.palette.secondary.main },
                       }}
                     >
@@ -159,22 +165,42 @@ const Navbar = () => {
             </Typography>
           </Link>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              alignItems: "center",
+            }}
+          >
             {pages.map((page) => (
               <Link href={page.link} key={page.title}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
-                    color: theme.palette.primary.light,
+                    color:
+                      route.pathname !== page.link
+                        ? theme.palette.primary.light
+                        : theme.palette.secondary.main,
                     display: "block",
-                    "&:hover": { color: theme.palette.secondary.main },
+                    "&:hover": {
+                      color:
+                        route.pathname !== page.link
+                          ? theme.palette.secondary.light
+                          : theme.palette.secondary.main,
+                    },
                   }}
                 >
                   {page.title}
                 </Button>
               </Link>
             ))}
+            <Box sx={{ width: "60%" }}>
+              <SearchInput
+                placeholder="Search for books or authors..."
+                dedicatedStyle={{ marginLeft: "24px" }}
+              />
+            </Box>
           </Box>
           <Link href="/cart">
             <IconButton

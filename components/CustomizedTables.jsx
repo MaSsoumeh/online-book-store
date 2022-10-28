@@ -148,14 +148,21 @@ export default function CustomizedTables() {
     <>
       <TableContainer sx={{ paddingX: "24px" }}>
         <Table sx={{ minWidth: 600 }} aria-label="customized table">
-          <TableHead sx={{ borderRadius: "20px" }}>
+          <TableHead>
             <TableRow>
-              <StyledTableCell>Book</StyledTableCell>
+              <StyledTableCell sx={{ borderTopLeftRadius: "10px" }}>
+                Book
+              </StyledTableCell>
               <StyledTableCell align="left">Details</StyledTableCell>
               <StyledTableCell align="left">Quantity</StyledTableCell>
               <StyledTableCell align="left">Price</StyledTableCell>
               <StyledTableCell align="left">Total Price</StyledTableCell>
-              <StyledTableCell align="left">Delete All</StyledTableCell>
+              <StyledTableCell
+                align="left"
+                sx={{ borderTopRightRadius: "10px" }}
+              >
+                Delete All
+              </StyledTableCell>
             </TableRow>
           </TableHead>
 

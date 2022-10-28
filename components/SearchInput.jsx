@@ -4,6 +4,8 @@ import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import Link from "next/link";
+import { theme } from "../styles/theme";
+import { Button, darken } from "@mui/material";
 
 export default function SearchInput({ dedicatedStyle, placeholder }) {
   const [value, setValue] = useState("");
@@ -16,11 +18,12 @@ export default function SearchInput({ dedicatedStyle, placeholder }) {
     <Paper
       component="form"
       sx={{
-        p: "2px 4px",
         display: "flex",
         alignItems: "center",
         width: 400,
-        borderRadius: "20px",
+        // borderRadius: "10px",
+        height: "48px",
+        width: "100%",
         ...dedicatedStyle,
       }}
       onSubmit={handleSubmit}
@@ -33,9 +36,22 @@ export default function SearchInput({ dedicatedStyle, placeholder }) {
         onChange={(e) => setValue(e.target.value)}
       />
       <Link href={`/book/${value?.split(" ").join("-").toLowerCase()}`}>
-        <IconButton type="submit" sx={{ p: "10px" }} aria-label="search">
+        <Button
+          type="submit"
+          sx={{
+            p: "10px",
+            background: theme.palette.secondary.main,
+            height: "100%",
+            borderTopLeftRadius: "0",
+            borderBottomLeftRadius: "0",
+            "&:hover": {
+              background: darken(theme.palette.secondary.main, 0.1),
+            },
+          }}
+          aria-label="search"
+        >
           <SearchIcon />
-        </IconButton>
+        </Button>
       </Link>
     </Paper>
   );

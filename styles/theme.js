@@ -1,5 +1,5 @@
 import { red } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
+import { createTheme, lighten } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
@@ -9,6 +9,10 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#FDBE34",
+      light: lighten("#FDBE34", 0.8),
+    },
+    blue: {
+      main: lighten("#0D226B", 0.5),
     },
   },
 });

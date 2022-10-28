@@ -7,9 +7,10 @@ const PageHeader = ({ title }) => {
       style={{
         textAlign: "center",
         width: "100%",
-        background: theme.palette.secondary.main,
+        background: theme.palette.primary.light,
         marginBottom: 36,
         color: theme.palette.primary.dark,
+        padding: "24px",
       }}
     >
       {title}

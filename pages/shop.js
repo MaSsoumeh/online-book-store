@@ -9,7 +9,6 @@ const ShopPage = ({ books }) => {
   return (
     <main style={{ ...styles.mainWrapper }}>
       <PageHeader title="All Books" />
-      <SearchInput placeholder="Search for books or authors..." />
       <BookWrapper>
         {books.map((book) => {
           return <BookCard book={book} key={book.id} />;
