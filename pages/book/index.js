@@ -11,18 +11,12 @@ const Book = ({ books }) => {
     <main style={{ ...styles.mainWrapper }}>
       <PageHeader title="Searched Books" />
       <BookWrapper>
-        {books.length ? (
-          books.map((book) => {
-            return <BookCard key={book.id} book={book} />;
-          })
-        ) : (
-          <Typography
-            color={theme.palette.primary.main}
-            sx={{ width: "100%", textAlign: "center" }}
-          >
-            There is no result
-          </Typography>
-        )}
+        <Typography
+          color={theme.palette.primary.main}
+          sx={{ width: "100%", textAlign: "center" }}
+        >
+          There is no result
+        </Typography>
       </BookWrapper>
     </main>
   );

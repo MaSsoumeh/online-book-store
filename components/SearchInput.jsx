@@ -37,7 +37,11 @@ export default function SearchInput({ dedicatedStyle, placeholder }) {
         value={value}
         onChange={handleChange}
       />
-      <Link href={`/book/${value?.split(" ").join("-").toLowerCase()}`}>
+      <Link
+        href={
+          value ? `/book/${value?.split(" ").join("-").toLowerCase()}` : "/shop"
+        }
+      >
         <Button
           type="submit"
           sx={{
