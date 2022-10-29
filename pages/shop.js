@@ -1,10 +1,8 @@
+import { styles } from ".";
 import BookCard from "../components/BookCard.tsx";
 import BookWrapper from "../components/BookWrapper";
 import PageHeader from "../components/PageHeader";
-import SearchInput from "../components/SearchInput";
-import { theme } from "../styles/theme";
 import { getBooks } from "./api/books";
-import { styles } from ".";
 const ShopPage = ({ books }) => {
   return (
     <main style={{ ...styles.mainWrapper }}>
