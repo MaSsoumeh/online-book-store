@@ -26,7 +26,7 @@ This is a responsive online book store with Next.js and Redux Toolkit
 
 ## Links
 
-- Live Site URL: [Live URL]()
+- Live Site URL: [Live URL](https://bookstoreline.netlify.app/shop)
 
 ## My process
 
